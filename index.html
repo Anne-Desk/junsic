@@ -14,7 +14,7 @@
 			align-items: center;
 			font-size: 2vh;
 			font-family: 'IntelOneMono';
-			background-color: #F2F2F2;
+			background-color: #F2B705;
 		}
 		body {
 			display: flex;
@@ -98,7 +98,7 @@
 							border-radius: 2vh;
 							width: 25vh;
 							max-width: 25vh;
-							max-height: 29.5vh;
+							max-height: 24.6vh;
 							overflow-y: auto;
 							display: none;
 							cursor: pointer;
@@ -186,7 +186,7 @@
 		<script>
 			function Genreclicked(number) {
 				document.querySelectorAll('.menuandlist ul').forEach(genrelist => genrelist.style.display = 'none');
-				document.querySelector('.genre-none').textContent = 'Click 👆 Track';
+				document.querySelector('.genre-none').textContent = 'Click 👇 Track';
 				document.querySelector('.genre' + number).style.display = 'block';
 				document.querySelectorAll('.genrebutton1, .genrebutton2, .genrebutton3').forEach(genrebutton => {
 					genrebutton.style.backgroundColor = '#0D0D0D';
