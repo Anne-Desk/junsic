@@ -88,6 +88,10 @@
 						}
 					.list{
 					}
+						.genre-none{
+							text-align: center;
+							margin: 0 0 0.5vh 0;
+						}
 						.genre1, .genre2, .genre3 {
 							padding: 1vh 2vh;
 							margin: 0;
@@ -99,6 +103,7 @@
 							font-size: 1.5vh;
 							overflow-y: auto;
 							display: none;
+							cursor: pointer;
 						}
 						.menuandlist ul li {
 							padding-bottom: 1vh;
@@ -184,6 +189,7 @@
 		<script>
 			function Genreclicked(number) {
 				document.querySelectorAll('.menuandlist ul').forEach(genrelist => genrelist.style.display = 'none');
+				document.querySelector('.genre-none').textContent = 'Click 👆 Track';
 				document.querySelector('.genre' + number).style.display = 'block';
 				document.querySelectorAll('.genrebutton1, .genrebutton2, .genrebutton3').forEach(genrebutton => {
 					genrebutton.style.backgroundColor = '#0D0D0D';
