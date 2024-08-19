@@ -1,212 +1,46 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-	<head>
-	<meta charset="utf-8" />
-	<title>₥junsic</title>
-		<style>
-        @font-face {
-            font-family: 'IntelOneMono';
-            src: url('IntelOneMono-Medium.woff2') format('woff2');
-        }
-		html {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			font-size: 2vh;
-			font-family: 'IntelOneMono';
-			background-color: #F2B705;
-		}
-		body {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			width: 100vh;
-			height: 100vh;
-			margin: 0;
-		}
-			.player {
-				display: flex;
-				flex-direction: column;
-				justify-content: space-evenly;
-				align-items: center;
-				width: calc(95vh * 0.44);
-				height: 95vh;
-				background-color: #262526;
-				border: 0.4vh solid black;
-				border-radius: 2vh;
-				box-shadow: 0.7vh 0.8vh 0 0.5vh black, 1.7vh 1.3vh 0.5vh 0.5vh rgba(0, 0, 0, 0.5); /* 수평, 수직, 흐림, 색상 */
-			}
-				.info{
-					width: 35vh;
-					height: 13vh;
-					color: #F2EDE4;
-				}
-				.title-text {
-					font-size: 4vh;
-				}
-				.notice{
-					display: flex;
-					justify-content: center;
-					background-color: #F2EDE4;
-					width: 32vh;
-					height: 15vh;
-					border-radius: 3vh;
-					box-shadow: 0.4vh 0.4vh 0.8vh 0 #080808;
-					overflow-y: auto;
-				}
-				.notice-text{
-					width: 27vh;
-				}
-				.menuandlist {
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-					background-color: #1A1A1A;
-					width: 34vh;
-					height: 40vh;
-					border-radius: 3vh;
-					color: #F2EDE4;
-					box-shadow: 0.4vh 0.4vh 0.8vh 0 #080808;
-				}
-					.menu{
-						display: flex;
-						padding : 1vh;
-					}
-						.genrebutton1, .genrebutton2, .genrebutton3  {
-							padding: 0.5vh 1vh;
-							margin: 0 1vh 0 1vh;
-							border: 0.15vh solid #F2EDE4;
-							border-radius: 2vh;
-							box-shadow: 0.1vh 0.1vh 0.2vh 0 #000000;
-							background-color: #0D0D0D;
-							text-decoration: none;
-							text-align: center;
-							color: #F2EDE4;
-							font-weight: bold;
-							cursor: pointer;
-						}
-					.list{
-					}
-						.genre-none{
-							text-align: center;
-							margin: 0 0 0.5vh 0;
-						}
-						.genre1, .genre2, .genre3 {
-							padding: 1vh 2.5vh;
-							margin: 0;
-							border: 0.1vh solid #F2EDE4;
-							border-radius: 2vh;
-							width: 25vh;
-							max-width: 25vh;
-							max-height: 24.6vh;
-							overflow-y: auto;
-							display: none;
-							cursor: pointer;
-						}
-						.menuandlist ul li {
-							padding-bottom: 1vh;
-						}						
-				.audiocontroller {
-					display: flex;
-					flex-direction: column;
-					justify-content: space-around;
-					align-items: center;
-					background-color: #F2EDE4;
-					width: 38vh;
-					height: 13vh;
-					border-radius: 3vh;
-					box-shadow: 0.4vh 0.4vh 0.8vh 0 #080808;
-				}
-					audio {
-						width: 35vh;
-						border-radius: 3vh;
-						box-shadow: 0.1vh 0.1vh 0.2vh 0 #BBBBBB;
-					}
-					audio::-webkit-media-controls-enclosure, audio::-webkit-media-controls-panel {
-        				background-color: #EAF205;
-						justify-content: center;
-						align-items: center;
-					}
-					.downloadbutton{
-						padding: 0.5vh 1.5vh;
-						border-radius: 2vh;
-						box-shadow: 0.1vh 0.1vh 0.2vh 0 #BBBBBB;
-						background-color: #F2E205;
-						text-decoration: none;
-						color: black;
-						font-weight: bold;
-						cursor: pointer;
-					}
-		</style>
-	</head>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8" /><title>₥junsic</title><style>@font-face {font-family: 'IntelOneMono';src: url('IntelOneMono-Medium.woff2') format('woff2');}html {display: flex;justify-content: center;align-items: center;font-size: 2vh;font-family: 'IntelOneMono';background-color: #F2B705;}body {display: flex;justify-content: center;align-items: center;width: 100vh;height: 100vh;margin: 0;}.player {display: flex;flex-direction: column;justify-content: space-evenly;align-items: center;width: calc(95vh * 0.44);height: 95vh;background-color: #262526;border: 0.4vh solid black;border-radius: 2vh;box-shadow: 0.7vh 0.8vh 0 0.5vh black, 1.7vh 1.3vh 0.5vh 0.5vh rgba(0, 0, 0, 0.5);}.info{width: 35vh;height: 13vh;color: #F2EDE4;}.title-text {font-size: 4vh;}.notice{display: flex;justify-content: center;background-color: #F2EDE4;width: 32vh;height: 15vh;border-radius: 3vh;box-shadow: 0.4vh 0.4vh 0.8vh 0 #080808;overflow-y: auto;}.notice-text{width: 27vh;}.menuandlist {display: flex;flex-direction: column;align-items: center;background-color: #1A1A1A;width: 34vh;height: 40vh;border-radius: 3vh;color: #F2EDE4;box-shadow: 0.4vh 0.4vh 0.8vh 0 #080808;}.menu{display: flex;padding : 1vh;}.genrebutton1, .genrebutton2, .genrebutton3  {padding: 0.5vh 1vh;margin: 0 1vh 0 1vh;border: 0.15vh solid #F2EDE4;border-radius: 2vh;box-shadow: 0.1vh 0.1vh 0.2vh 0 #000000;background-color: #0D0D0D;text-decoration: none;text-align: center;color: #F2EDE4;font-weight: bold;cursor: pointer;}.list{}.genre-none{text-align: center;margin: 0 0 0.5vh 0;}.genre1, .genre2, .genre3 {padding: 1vh 2.5vh;margin: 0;border: 0.1vh solid #F2EDE4;border-radius: 2vh;width: 25vh;max-width: 25vh;max-height: 24.6vh;overflow-y: auto;display: none;cursor: pointer;}.menuandlist ul li {padding-bottom: 1vh;}.audiocontroller {display: flex;flex-direction: column;justify-content: space-around;align-items: center;background-color: #F2EDE4;width: 38vh;height: 13vh;border-radius: 3vh;box-shadow: 0.4vh 0.4vh 0.8vh 0 #080808;}audio {width: 35vh;border-radius: 3vh;box-shadow: 0.1vh 0.1vh 0.2vh 0 #BBBBBB;}audio::-webkit-media-controls-enclosure, audio::-webkit-media-controls-panel {background-color: #EAF205;justify-content: center;align-items: center;}.downloadbutton{padding: 0.5vh 1.5vh;border-radius: 2vh;box-shadow: 0.1vh 0.1vh 0.2vh 0 #BBBBBB;background-color: #F2E205;text-decoration: none;color: black;font-weight: bold;cursor: pointer;}</style></head><body><div class="top"></div><div class ="player"><div class ="info"><span class="title-text">Junsic</span><span>'s music<br>available for commercial use<br>licensed under CC0<br>(No Rights Reserved)</span></div><div class ="notice"><p class="notice-text">I'm currently working on some new tracks.<br>Stay tuned for the release!</p></div><div class ="menuandlist"><div class="menu">
+	<a class="genrebutton1" onclick="Genreclicked('1')">
+
+		
+		<!-- 아이콘 ▶▶          -->😊<!--          --><br><!-- 첫번째 장르 제목 ▶▶          -->Bright<!--          --></a>
+	<a class="genrebutton2" onclick="Genreclicked('2')">
+
+		
+		<!-- 아이콘 ▶▶          -->😎<!--          --><br><!-- 두번째 장르 제목 ▶▶          -->Beat<!--          --></a>
+	<a class="genrebutton3" onclick="Genreclicked('3')">
+
+		
+		<!-- 아이콘 ▶▶          -->😔<!--          --><br><!-- 세번째 장르 제목 ▶▶          -->Mellow<!--          --></a>
+</div><div class="list"><p class="genre-none">Click 👆 Genre</p>
+
+	
+	<ul class="genre1">
+
+		
+		<!-- 첫번째 장르 -->
+		<li onclick="Playmusic('Bright/test_audio.mp3', this)">Test for Inserting Long long long long long-Titled Music File</li>
+		<li onclick="Playmusic('Bright/test_audio.mp3', this)">Text Music 2</li>
+		<li onclick="Playmusic('Bright/test_audio.mp3', this)">Text Music 3</li>
+  <!-- 추가 예시 <li onclick="Playmusic('리포지토리 내 음악 파일 위치한 폴더 이름/음악 파일 이름.mp3', this)">음악 제목</li>          -->
+	
+	</ul><ul class="genre2">
+
+		
+		<!-- 두번째 장르 -->
+		<li onclick="Playmusic('Bright/test_audio.mp3', this)">Text Music 4</li>
+		<li onclick="Playmusic('Bright/test_audio.mp3', this)">Test for Inserting Long-Titled Music File</li>
+		<li onclick="Playmusic('Bright/test_audio.mp3', this)">Text Music 6</li>
+  <!-- 추가 예시 <li onclick="Playmusic('리포지토리 내 음악 파일 위치한 폴더 이름/음악 파일 이름.mp3', this)">음악 제목</li>          -->
+
+	
+	</ul><ul class="genre3">
 
 
-	<body>
-		<div class="top">
-		</div>
-			<div class ="player">
-				<div class ="info">
-					<span class="title-text">Junsic</span><span>'s music<br>available for commercial use<br>licensed under CC0<br>(No Rights Reserved)</span>
-				</div>
-				<div class ="notice">
-					<p class="notice-text">I'm currently working on some new tracks.<br>Stay tuned for the release!</p>
-				</div>
-				<div class ="menuandlist">
-					<div class="menu">
-						<a class="genrebutton1" onclick="Genreclicked('1')">😊<br>Bright</a>
-						<a class="genrebutton2" onclick="Genreclicked('2')">😎<br>Beat</a>
-						<a class="genrebutton3" onclick="Genreclicked('3')">😔<br>Mellow</a>
-					</div>
-					<div class="list">
-						<p class="genre-none">Click 👆 Genre</p>
-						<ul class="genre1">
-							<li onclick="Playmusic('Bright/test_audio.mp3', this)">Test for Inserting Long long long long long-Titled Music File</li>
-							<li onclick="Playmusic('Bright/test_audio.mp3', this)">Text Music 2</li>
-							<li onclick="Playmusic('Bright/test_audio.mp3', this)">Text Music 3</li>
-						</ul>
-						<ul class="genre2">
-							<li onclick="Playmusic('Bright/test_audio.mp3', this)">Text Music 4</li>
-							<li onclick="Playmusic('Bright/test_audio.mp3', this)">Test for Inserting Long-Titled Music File</li>
-							<li onclick="Playmusic('Bright/test_audio.mp3', this)">Text Music 6</li>
-						</ul>
-						<ul class="genre3">
-							<li onclick="Playmusic('Bright/test_audio.mp3', this)">Text Music 7</li>
-							<li onclick="Playmusic('Bright/test_audio.mp3', this)">Text Music 8</li>
-							<li onclick="Playmusic('Bright/test_audio.mp3', this)">Test for Inserting Long-Titled Music File</li>
-						</ul>
-					</div>
-				</div>
-				<div class ="audiocontroller">
-					<audio controls>
-						<source src="" type="audio/mp3">
-					</audio>
-					<a href="" download class="downloadbutton">Download</a>
-				</div>
-			</div>
-		<script>
-			function Genreclicked(number) {
-				document.querySelectorAll('.menuandlist ul').forEach(genrelist => genrelist.style.display = 'none');
-				document.querySelector('.genre-none').textContent = 'Click 👇 Track';
-				document.querySelector('.genre' + number).style.display = 'block';
-				document.querySelectorAll('.genrebutton1, .genrebutton2, .genrebutton3').forEach(genrebutton => {
-					genrebutton.style.backgroundColor = '#0D0D0D';
-					genrebutton.style.color = '#F2EDE4';
-				});
-				document.querySelector('.genrebutton' + number).style.backgroundColor = '#F2EDE4';
-				document.querySelector('.genrebutton' + number).style.color = 'black';
-			}
-			function Playmusic(src, element) {
-				var audio = document.querySelector('audio');
-				audio.src = src;
-				audio.play();
-				document.querySelector('.downloadbutton').href = src;
-				document.querySelectorAll('.list li').forEach(list => {
-					list.style.fontSize = '2vh';
-					list.style.color = '#F2EDE4';
-				});
-				element.style.fontSize = '2.1vh';
-				element.style.color = '#F2E205';
-				}
-		</script>
-	</body>
-</html>
+		<!-- 세번째 장르 -->
+		<li onclick="Playmusic('Bright/test_audio.mp3', this)">Text Music 7</li>
+		<li onclick="Playmusic('Bright/test_audio.mp3', this)">Text Music 8</li>
+		<li onclick="Playmusic('Bright/test_audio.mp3', this)">Test for Inserting Long-Titled Music File</li>
+  <!-- 추가 예시 <li onclick="Playmusic('리포지토리 내 음악 파일 위치한 폴더 이름/음악 파일 이름.mp3', this)">음악 제목</li>          -->
+
+		
+</ul></div></div><div class ="audiocontroller"><audio controls><source src="" type="audio/mp3"></audio><a href="" download class="downloadbutton">Download</a></div></div><script>function Genreclicked(number) {document.querySelectorAll('.menuandlist ul').forEach(genrelist => genrelist.style.display = 'none');document.querySelector('.genre-none').textContent = 'Click 👇 Track';document.querySelector('.genre' + number).style.display = 'block';document.querySelectorAll('.genrebutton1, .genrebutton2, .genrebutton3').forEach(genrebutton => {genrebutton.style.backgroundColor = '#0D0D0D';genrebutton.style.color = '#F2EDE4';});document.querySelector('.genrebutton' + number).style.backgroundColor = '#F2EDE4';document.querySelector('.genrebutton' + number).style.color = 'black';}function Playmusic(src, element) {var audio = document.querySelector('audio');audio.src = src;audio.play();document.querySelector('.downloadbutton').href = src;document.querySelectorAll('.list li').forEach(list => {list.style.fontSize = '2vh';list.style.color = '#F2EDE4';});element.style.fontSize = '2.1vh';element.style.color = '#F2E205';}</script></body></html>
